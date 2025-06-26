@@ -34,15 +34,26 @@ modules:
     install:
       - nvidia
 
+#  - type: script
+#    scripts:
+#    - install-nvidia.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - nvidia-suspend.service
+        - nvidia-hibernate.service
+        - nvidia-resume.service
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - org.mozilla.firefox
-        - org.gnome.Loupe
-      remove:
-        - org.gnome.eog
+        - net.waterfox.waterfox
+        - io.missioncenter.MissionCenter
+#      remove:
+#        - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
