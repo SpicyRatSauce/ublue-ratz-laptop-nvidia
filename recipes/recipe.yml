@@ -3,11 +3,11 @@
 # image will be published to ghcr.io/<user>/<name>
 name: ublue-ratz-laptop-nvidia
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Ublue image for nvidia laptops
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 41 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -28,6 +28,11 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: akmods
+    base: main
+    install:
+      - nvidia
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
