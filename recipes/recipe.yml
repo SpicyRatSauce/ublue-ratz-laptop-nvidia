@@ -78,7 +78,6 @@ modules:
         - org.kde.kate
         - org.kde.okular
         - org.kde.kcalc
-        - org.kde.kwalletmanager5
         - org.kde.kontact
         - org.kde.filelight
         - org.kde.konsole
