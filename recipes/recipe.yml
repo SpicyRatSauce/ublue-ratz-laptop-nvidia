@@ -72,6 +72,48 @@ modules:
       install:
         - net.waterfox.waterfox
         - io.missioncenter.MissionCenter
+        # KDE Desktop Flatpaks
+        - org.kde.kphotoalbum
+        - org.kde.gwenview
+        - org.kde.kate
+        - org.kde.okular
+        - org.kde.kcalc
+        - org.kde.kwalletmanager5
+        - org.kde.kontact
+        - org.kde.filelight
+        - org.kde.konsole
+        - org.kde.ark
+        - org.kde.krdc
+        - org.kde.skanpage
+        - org.kde.kamoso
+        - org.kde.marknote
+        # Basic
+        - com.github.tchx84.Flatseal
+        - org.fkoehler.KTailctl
+        - it.mijorus.gearlever
+        - com.usebottles.bottles
+        - io.github.dvlv.boxbuddyrs
+        - com.github.zocker_160.SyncThingy
+        - org.videolan.VLC
+        - org.gnome.World.PikaBackup
+        # Misc
+        - com.discordapp.Discord
+        - org.localsend.localsend_app
+        - com.transmissionbt.Transmission
+        - com.dec05eba.gpu_screen_recorder
+        # Creative
+        - org.kde.krita
+        - com.ultimaker.cura
+        - org.kde.kdenlive
+        # Office Tools
+        - com.github.jeromerobert.pdfarranger
+        - org.onlyoffice.desktopeditors
+        # Games
+        - org.prismlauncher.PrismLauncher
+        - com.github.Matoking.protontricks
+        - com.valvesoftware.Steam
+        - com.heroicgameslauncher.hgl
+        - org.vinegarhq.Sober
 #      remove:
 #        - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
