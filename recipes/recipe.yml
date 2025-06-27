@@ -33,7 +33,7 @@ modules:
       - tailscale
       - steam-devices
       - lm_sensors
-
+      - distrobox
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -44,10 +44,19 @@ modules:
 #    base: main
 #    install:
 #      - nvidia
+  - type: kargs
+    arch: x86_64
+    kargs:
+      - nvidia-drm.modeset=1
+      - modprobe.blacklist=nouveau
+      - rd.driver.blacklist=nouveau
 
   - type: script
     scripts:
-    - install-nvidia.sh
+    - installnvidiakmod.sh
+    - installnvidiapackages.sh
+    - setearlyloading.sh
+#    - setdrmvariables.sh
 
   - type: systemd
     system:
